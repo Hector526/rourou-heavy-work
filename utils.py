@@ -13,7 +13,7 @@ def country_goodWater(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
         pass
 
 
@@ -33,7 +33,7 @@ def country_expectedWater(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
         pass
 
 
@@ -52,7 +52,7 @@ def country_goodWater_yearOnyear(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
         pass
 
 
@@ -72,7 +72,8 @@ def country_expectedWater_yearOnyear(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
+        print("warn： 存在不可以用数据列名：同比（自动）或国考目标")
         pass
 
 
@@ -91,7 +92,7 @@ def country_goodWater_monthOnmonth(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
         pass
 
 
@@ -111,7 +112,7 @@ def country_expectedWater_monthOnmonth(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
         pass
 
 
@@ -130,7 +131,8 @@ def province_goodWater(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
+        print("warn： 存在不可以用数据，列名：水质类别")
         pass
 
 
@@ -150,5 +152,6 @@ def province_expectedWater(row):
             return 1
         else:
             return 0
-    except KeyError as e:
+    except KeyError as dummy_e:
+        print("warn： 存在不可以用数据，列名：水质类别或水质目标")
         pass
